@@ -4,10 +4,12 @@ TARGETS = ../lib/libzfp.a ../lib/libzfp.so
 OBJECTS = bitstream.o decode1f.o decode1d.o encode1f.o encode1d.o decode2f.o decode2d.o encode2f.o encode2d.o decode3f.o decode3d.o encode3f.o encode3d.o zfp.o
 
 ../lib/libzfp.a: $(OBJECTS)
+	mkdir -p $(dir $@)
 	rm -f $@
 	ar rc $@ $^
 
 ../lib/libzfp.so: $(OBJECTS)
+	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -shared $^ -o $@
 
 .c.o:
