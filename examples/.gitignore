@@ -1,0 +1,14 @@
+diffusion-raw
+diffusion-raw.o
+diffusion-zfp
+diffusion.o
+fields.o
+pgm
+pgm.o
+simple
+simple.o
+speed
+speed.o
+testzfp
+testzfp.o
+zfp
